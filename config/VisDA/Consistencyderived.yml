@@ -1,0 +1,41 @@
+# Main settings
+al_strat: 'SENTRYTest'
+#al_strat: 'uniform'
+da_strat: 'mme'
+# CNN details
+cnn: 'ResNet50'
+l2_normalize: true
+temperature: 0.05
+
+# Training params
+optimizer: 'SGD'
+batch_size: 16
+load_source: true
+lr: 0.001
+wd: 0.0005
+num_epochs: 50
+src_sup_wt: 0.1
+unsup_wt: 0.1
+kl_wt: 0.1
+# DA params
+load_da: false
+da_lr: 0.001
+uda_lr: 0.001
+da_wd: 0.0005
+da_num_epochs: 80
+
+uda_num_epochs: 80
+adapt_num_epochs: 120
+# Active params
+runs: 1
+
+# Loss weights
+lambda_src: 1.0
+lambda_unsup: 0.1
+lambda_ent: 1.0
+cent_wt: 0.01
+use_cuda: True
+
+# PLNL Parameters
+temp_nl: 2.0
+kappa_p: 0.05
